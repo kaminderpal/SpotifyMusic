@@ -1,0 +1,1 @@
+This app allow user to search music artists and their albums
