@@ -1,7 +1,4 @@
 import React from 'react'
-import {NavLink} from 'react-router-dom';
-import M from 'materialize-css/dist/js/materialize.min';
-import Logout from '../Logout/logout';
 
 const Header = (props) => {
   return (
@@ -9,7 +6,7 @@ const Header = (props) => {
           <form className="col s12">
                <div className="row">
                     <div className="input-field col s12">
-                         {/* <i className="material-icons prefix">search</i> */}
+                         { !props.disabled ? <i className="material-icons prefix">search</i> : null }
                          <input id="icon_prefix" 
                                 type="text" 
                                 disabled={ props.disabled }

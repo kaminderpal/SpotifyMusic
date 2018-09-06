@@ -5,7 +5,6 @@ import Session from '../Config/util';
 
 const PrivateRoute = ( { component: Component, ...rest } ) => {
      return <Route {...rest} render={props => (
-          console.log(Session.getToken()),
           Session.getToken() !== null ? ( 
           <Component {...props} /> ) :
           <Redirect to={{

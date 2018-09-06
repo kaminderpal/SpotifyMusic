@@ -1,4 +1,6 @@
-
+/**
+ * Util function to store token in sessin storage.
+ */
 const Session = ( () => {
     return {
               setToken : (token) => {

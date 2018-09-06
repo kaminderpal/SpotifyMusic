@@ -22,7 +22,7 @@ export const AlbumCard = (props) => {
     <div className='col s12 m4'>
       <div className="card z-depth-1 hoverable">
           <div className="card-image waves-effect waves-block waves-light">
-               <img className="activator" src={props.img} />
+               <img className="activator" src={props.img} alt={props.name}/>
           </div>
           <div className="card-content">
                <span className="truncate activator grey-text text-darken-4 f-16 f-w-600">{props.name}<i className="material-icons right cursor-pointer">more_vert</i></span>

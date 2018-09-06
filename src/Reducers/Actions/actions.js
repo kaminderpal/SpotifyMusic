@@ -1,3 +1,6 @@
+/**
+ * Redux action to dispatch before and after making ajax calls.
+ */
 import axios from 'axios';
 import { AUTHENTICATING, AUTHENTICATED, SEARCHING_ARTISTS,SEARCH_ARTISTS,SEARCH_ARTISTS_ERROR } from './types';
 import API from '../../Config/api';
