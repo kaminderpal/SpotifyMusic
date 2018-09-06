@@ -52,7 +52,7 @@ export class Login extends Component {
                               <h3>Musically</h3>
                          </div>
                          <div className='p-2'>
-                             <a href={API.URL_SPOTIFY_AUTH}  className='waves-effect waves-light btn'>
+                             <a href={API.getSpotifyAuth()}  className='waves-effect waves-light btn'>
                               Connect With Spotify
                               </a>
                          </div>

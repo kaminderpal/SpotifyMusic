@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { AUTHENTICATING, AUTHENTICATED, SEARCHING_ARTISTS,SEARCH_ARTISTS,SEARCH_ARTISTS_ERROR } from './types';
 import API from '../../Config/api';
-import Session from '../../Config/util';
+import { getToken } from './utilActions';
 
 export const authenticating = () => dispatch => {
      dispatch( {  
@@ -26,7 +26,7 @@ export const searchingArtists = () => dispatch => {
     } );
 }
 export const searchArtists = (name) => dispatch => {
-    axios.get(API.URL_SEARCH_ARTISTS+name,{
+    axios.get(API.getArtists(name),{
         headers : {
             Authorization : 'Bearer ' + getToken()
         }
@@ -40,18 +40,4 @@ export const searchArtists = (name) => dispatch => {
             payload : error.response.data.error
     }) );
 };
-export const initError = () => dispatch => {
-    dispatch( {
-        type : SEARCHING_ARTISTS,
-        payload : {status : 401}
-} );
-}
-const getToken = () =>{
-    const token =  Session.getToken();
-    if( token === null ){
-        initError();
-    }
-    else{
-        return Session.getToken().access_token;
-    }
-}
+

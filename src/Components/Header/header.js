@@ -9,14 +9,16 @@ const Header = (props) => {
           <form className="col s12">
                <div className="row">
                     <div className="input-field col s12">
-                         <i className="material-icons prefix">search</i>
+                         {/* <i className="material-icons prefix">search</i> */}
                          <input id="icon_prefix" 
                                 type="text" 
-                                className="validate" 
+                                disabled={ props.disabled }
+                                className={ `validate ` + props.classname } 
                                 value = { props.value }
                                 onChange={ event => props.onSearch(event)}
                                 />
-                         <label htmlFor="icon_prefix">Search Artists</label>
+                                { !props.disabled ? <label htmlFor="icon_prefix">Search Artists</label> : null }
+                         
                     </div>
                </div>
           </form>

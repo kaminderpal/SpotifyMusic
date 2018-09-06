@@ -1,5 +1,5 @@
 import React from 'react'
-import ArtistElem from './artistElem';
+import ArtistCard from './artistCard';
 import logo from '../../Assets/default.jpg'
 import NotFound from '../NotFound/notfound';
 const Artists = (props) => {
@@ -7,13 +7,13 @@ const Artists = (props) => {
      if( props.artists.length > 0 ){
           list = props.artists.map( function(artist,index){
                var url = artist.images.length ? artist.images[0].url : logo
-               return  <ArtistElem  img={url} name= {artist.name}  key={artist.id} />
+               return  <ArtistCard  img={url} name= {artist.name}  key={artist.id} id={artist.id} getAlbums={props.getAlbums}  />
           })
      }
   return (
     <div className='container'>
           <div className='row'>
-               {  list.length > 0 && !props.isSearching ? list : <NotFound/>}
+               {  list.length > 0 && !props.isSearching ? list : <NotFound/> }
           </div>
     </div>
   )

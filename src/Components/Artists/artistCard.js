@@ -1,6 +1,6 @@
 import React from 'react'
-
-const ArtistElem = (props) => {
+import { Link } from 'react-router-dom'
+const ArtistCard = (props) => {
   return (
      <div className="col s12 m6">
           <div className="card horizontal hoverable">
@@ -11,10 +11,13 @@ const ArtistElem = (props) => {
                     <div className="card-content">
                          <h5>{props.name}</h5>
                     </div>
+                    <div className="card-action border-none right-align">
+                      <Link to="/" className='teal-text' data-id={props.id} data-name={props.name} onClick={event => props.getAlbums(event)}>Albums</Link>
+                  </div>
                </div>
           </div>
      </div>
   )
 }
 
-export default ArtistElem
+export default ArtistCard
