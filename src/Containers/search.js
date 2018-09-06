@@ -20,6 +20,7 @@ export class Search extends Component {
    * By default show artists on search page.
    */
   componentDidMount(){
+    this.props.searchingArtists();
     this.props.searchArtists("bob");
   }
   /**
