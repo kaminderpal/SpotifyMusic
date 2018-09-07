@@ -9,3 +9,4 @@ export const SEARCH_ARTISTS_ALBUMS_ERROR  = 'SEARCH_ARTISTS_ALBUMS_ERROR';
 export const GETTING_ALBUM = 'GETTING_ALBUM';
 export const GET_ALBUM = 'GET_ALBUM';
 export const GET_ALBUM_ERROR = 'GET_ALBUM_ERROR';
+export const LOG_OUT = 'LOG_OUT';

@@ -9,6 +9,9 @@ const Session = ( () => {
               getToken :  () => {
                 const token = JSON.parse( sessionStorage.getItem("token") );
                 return typeof token === 'object' ?  token : null;
+              },
+              clearToken : () => {
+                sessionStorage.clear();
               }
             }
 } )();

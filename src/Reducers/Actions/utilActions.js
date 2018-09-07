@@ -3,7 +3,7 @@
  * When token expires or deleted from storage.
  */
 import Session from '../../Config/util';
-import { SEARCH_ARTISTS_ERROR } from './types';
+import { SEARCH_ARTISTS_ERROR,LOG_OUT } from './types';
 const initError = () => dispatch => {
      dispatch( {
          type : SEARCH_ARTISTS_ERROR,
@@ -18,4 +18,10 @@ export const getToken = () =>{
      else{
          return Session.getToken().access_token;
      }
+ }
+export const logout = () => dispatch => {
+     dispatch({
+         type : LOG_OUT,
+         state : undefined
+     }) 
  }

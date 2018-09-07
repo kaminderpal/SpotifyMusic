@@ -6,8 +6,8 @@ import { searchingArtists, searchArtists } from '../Reducers/Actions/actions'
 import Spinner from '../Components/Spinner/spinner'
 import Artists from '../Components/Artists/artists'
 import { withRouter } from 'react-router-dom'
-import ErrorModal from '../Components/ErrorModal/errorModal';
-import PropTypes from 'prop-types';
+import ErrorModal from '../Components/ErrorModal/errorModal'
+import PropTypes from 'prop-types'
 
 export class Search extends Component {
   

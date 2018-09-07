@@ -1,9 +1,9 @@
 import React from 'react'
-import {NavLink} from 'react-router-dom';
-const LogoutButton = () => {
+import {Link} from 'react-router-dom';
+const LogoutButton = (props) => {
   return (
-    <div>
-      <NavLink to="/" class="waves-effect waves-light btn">button</NavLink>
+    <div className='right' style={{marginRight:"10px"}}>
+      <Link to="/" onClick={props.onClick} className="waves-effect waves-light btn">Log Out</Link>
     </div>
   )
 }

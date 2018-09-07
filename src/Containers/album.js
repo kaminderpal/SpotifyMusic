@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import Header from '../Components/Header/header'
 import Albums from '../Components/Album/albums'
 import Spinner from '../Components/Spinner/spinner'
-import ErrorModal from '../Components/ErrorModal/errorModal';
+import ErrorModal from '../Components/ErrorModal/errorModal'
 import PropTypes from 'prop-types';
 import { gettingAlbum , getAlbum ,searchingArtistAlbum,searchArtistAlbum } from '../Reducers/Actions/albumAction'
 
@@ -39,7 +39,7 @@ export class Album extends Component {
     return (
       <div>
          <Header value={this.props.location.state.name} disabled={true} classname={`input_title`}/>
-         { !this.props.albums ? <Spinner/> : <Albums albums={this.props.albums} /> } 
+         { this.props.isSearchingAlbums ? <Spinner/> : <Albums albums={this.props.albums} /> } 
          { this.props.error ? <ErrorModal open={this.props.error}/> : null }
       </div>
     )

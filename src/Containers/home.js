@@ -15,6 +15,7 @@ export class Home extends Component {
        }
      }
      componentDidMount(){
+       console.log(this.props.location);
           this.props.authenticating();
      }
      /**
