@@ -8,6 +8,7 @@ import LogoutButton from '../Components/Logout/logout'
 import { logout } from '../Reducers/Actions/utilActions'
 import { connect } from 'react-redux'
 import Session from '../Config/util';
+import NoMatch from '../Components/NoMatch/noMatch';
 
 export class Router extends Component {
 
@@ -19,7 +20,6 @@ export class Router extends Component {
   }
 
   render() {
-    console.log(this.props)
     return (
       <Fragment>
           {  this.props.location.pathname !== "/" ?  <LogoutButton onClick={ (e) => this.logout(e) } /> : null }
@@ -27,6 +27,7 @@ export class Router extends Component {
                 <Route path="/" exact component={Home} />
                 <PrivateRoute path="/search" component={Search} />
                 <PrivateRoute path ="/album/:name/:id" component={Album}/>
+                <Route component={NoMatch} />
            </Switch>
       </Fragment>
     )
