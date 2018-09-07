@@ -9,7 +9,7 @@ const ArtistCard = (props) => {
                </div>
                <div className="card-stacked">
                     <div className="card-content">
-                         <h5>{props.name}</h5>
+                         <h5 className='f-16'>{props.name}</h5>
                     </div>
                     <div className="card-action border-none right-align">
                     <Link to={{
