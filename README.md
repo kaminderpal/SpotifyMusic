@@ -1,7 +1,7 @@
 This app allow user to search music artists and their albums
 
 Steps to follow 
-# Clone the repo https://github.com/kamy1/spotifymusic.git ${Appname)
+# Clone the repo https://github.com/kaminderpal/spotifymusic.git ${Appname)
 # cd ${Appname}
 # run command npm install
 # run command npm start
