@@ -1,7 +1,7 @@
 {
   "name": "SpotifyMusic",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "homepage" : "https://kaminderpal.github.io/spotifymusic",
   "dependencies": {
     "axios": "^0.18.0",
